@@ -1,0 +1,168 @@
+<!-- <div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col" hidden>ID</th>
+                <th scope="col">ГОСТ</th>
+                <th scope="col">ТИП</th>
+                <th scope="col" hidden>АДРЕС МОДЕЛИ</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let gost of gosts">
+                <th hidden>{{gost.ID}}</th>
+                <td>{{gost.GOST}}</td>
+                <td>{{gost.TYPE}}</td>
+                <td hidden>{{gost.MODEL_URL}}</td>
+                <td><button class="btn btn-dark" (click)= "getTypeGOSTS(gost)">Выбрать</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">НОМЕР</th>
+                <th scope="col">d mm</th>
+                <th scope="col">D mm</th>
+                <th scope="col">d2 mm</th>
+                <th scope="col">D2 mm</th>
+                <th scope="col" >r mm</th>
+                <th scope="col">H mm</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let TypeGost of TypeGosts">
+                <td>{{TypeGost.NUMBER}}</td>
+                <td>{{TypeGost.d}}</td>
+                <td>{{TypeGost.Dmax}}</td>
+                <td>{{TypeGost.d2}}</td>
+                <td>{{TypeGost.Dmax2}}</td>
+                <td >{{TypeGost.f}}</td>
+                <td>{{TypeGost.H}}</td>
+                <td><button class="btn btn-dark" (click)= "insertFile(TypeGost)">Вставить</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<select [(ngModel)]="selectedDiameter"
+(change)="onChangeD($event.target.value)">
+        <option *ngFor="let d of diameters" [value]="d.d" >{{d.d}}</option>
+</select>
+
+<select (change)="onChangeL($event.target.value)">
+    <option *ngFor="let l of lenghts" [value]="l.l" >{{l.l}}</option>
+</select>
+
+
+    <div><a>d </a><input [(ngModel)]="param_d" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>d1</a><input [(ngModel)]="param_d1" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>S </a><input [(ngModel)]="param_S" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>k </a><input [(ngModel)]="param_k" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>e </a><input [(ngModel)]="param_e" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>dw</a><input [(ngModel)]="param_dw" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>d3</a><input [(ngModel)]="param_d3" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>d4</a><input [(ngModel)]="param_d4" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>l2</a><input [(ngModel)]="param_l2" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>l</a><input [(ngModel)]="param_l" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>l1</a><input [(ngModel)]="param_l1" [ngModelOptions]="{standalone: true}"></div>
+    <div><a>b</a><input [(ngModel)]="param_b" [ngModelOptions]="{standalone: true}"></div>
+
+    
+    <button (click)="insertFile()">Buttton</button> -->
+
+     <!-- <nav>
+        <a routerLink="/gost">ГОСТы</a>
+        <a routerLink="/gost21558970">2 15589-70</a>
+      </nav> -->
+      <router-outlet></router-outlet> 
+
+     
+      <nav>
+          <div id="tab-content4" 
+               class="tab-content"
+               role="tabpanel" 
+               aria-labelledby="specification" 
+               aria-hidden="true">
+            <div class="thumb">
+              <div class="img-item">
+                <div class="thumbnail">
+                  <a>
+                <div class="caption">
+                  <img src="/assets/15589-70.png" style="width:20%;">
+                  <input hidden="true" id='fileinput' type='text' size='75'/>
+              <br>
+                  <p type='button' routerLink="/gost21558970">2 15589-70
+                </div>
+              </a>
+            </div>
+              </div>
+              <div class="img-item">
+                <div class="thumbnail">
+                  <a>
+                <div class="caption">
+                  <img src="/assets/15589-70.png" style="width:20%;">
+                  <input hidden="true" id='fileinput' type='text' size='75'/>
+              <br>
+                  <p type='button' routerLink="/gost21558970">2 15589-70
+                </div>
+              </a>
+            </div>
+              </div>
+              <div class="img-item">
+                <div class="thumbnail">
+                  <a>
+                <div class="caption">
+                  <img src="/assets/15589-70.png" style="width:20%;">
+                  <input hidden="true" id='fileinput' type='text' size='75'/>
+              <br>
+                  <p type='button' routerLink="/gost21558970">2 15589-70
+                </div>
+              </a>
+            </div>
+              </div>
+              <div class="img-item">
+                <div class="thumbnail">
+                  <a>
+                <div class="caption">
+                  <img src="/assets/15589-70.png" style="width:20%;">
+                  <input hidden="true" id='fileinput' type='text' size='75'/>
+              <br>
+                  <p type='button' routerLink="/gost21558970">2 15589-70
+                </div>
+              </a>
+            </div>
+              </div>
+              <div class="img-item">
+                <div class="thumbnail">
+                  <a>
+                <div class="caption">
+                  <img src="/assets/15589-70.png" style="width:20%;">
+                  <input hidden="true" id='fileinput' type='text' size='75'/>
+              <br>
+                  <p type='button' routerLink="/gost21558970">2 15589-70
+                </div>
+              </a>
+            </div>
+              </div>
+              <div class="img-item">
+                <div class="thumbnail">
+                  <a>
+                <div class="caption">
+                  <img src="/assets/15589-70.png" style="width:20%;">
+                  <input hidden="true" id='fileinput' type='text' size='75'/>
+              <br>
+                  <p type='button' routerLink="/gost21558970">2 15589-70
+                </div>
+              </a>
+            </div>
+              </div>
+              </div>    
+          </div>
+      </nav>
+
+    
+   
