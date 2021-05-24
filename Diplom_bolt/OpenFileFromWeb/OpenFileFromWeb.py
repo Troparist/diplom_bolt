@@ -7,6 +7,10 @@ import adsk.cam
 import traceback
 import json
 from .scripts import gost15589_70
+from .scripts import gost15590_70
+from .scripts import gost15591_70
+from .scripts import gost7798_70
+from .scripts import gost7811_70
 
 commandDefinition = None
 toolbarControl = None
@@ -98,8 +102,14 @@ class InsertedFromURLEventHandler(adsk.core.WebRequestEventHandler):
 
             if (gost == "15589-70"):
                 gost15589_70.run(occurence, params) #запуск скрипта
-            if (gost == "123123"):
-                pass
+            if (gost == "15590-70"):
+                gost15590_70.run(occurence, params)
+            if (gost == "15591-70"):
+                gost15591_70.run(occurence, params)
+            if (gost == "7798-70"):
+                gost7798_70.run(occurence, params)
+            if (gost == "7811-70"):
+                gost7811_70.run(occurence, params)
             
             ui.messageBox(Description)
 
